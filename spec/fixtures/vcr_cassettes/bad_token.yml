@@ -1,0 +1,35 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spark.io/v1/devices/?access_token=bad_token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 20 Feb 2014 21:47:57 GMT
+      Server:
+      - nginx/1.4.2
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '109'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"code\": 400,\n  \"error\": \"invalid_grant\",\n  \"error_description\":
+        \"The access token provided is invalid.\"\n}"
+    http_version:
+  recorded_at: Thu, 20 Feb 2014 21:47:57 GMT
+recorded_with: VCR 2.5.0
